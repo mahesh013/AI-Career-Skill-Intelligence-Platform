@@ -2,7 +2,7 @@
 
 An AI-powered career development platform that helps students, freshers, and working professionals understand their demonstrated skills, identify gaps for a target role, practice deliberately, and measure progress toward career readiness.
 
-> **Project status:** Documentation and planning. Application features have not yet been implemented.
+> **Project status:** Foundation setup in progress. A Django project scaffold and backend dependency list are present. The React frontend scaffold is pending Node.js/npm setup. Product features have not yet been implemented.
 
 ## Product Vision
 
@@ -131,15 +131,18 @@ This is an initial skill outline, not a final assessment rubric. Skill definitio
 
 ## Planned Directory Structure
 
-This is a high-level target only. The directories below will be created later as their milestones begin.
+This layout is being created milestone by milestone. The Django project scaffold is present under `backend/`; `frontend/` is reserved for the Vite app once Node.js/npm are available. The `docs/` directory remains planned.
 
 ```text
 AI-Career-Intelligence/
-|-- frontend/                 # React + TypeScript application (planned)
-|-- backend/                  # Django REST API (planned)
+|-- frontend/                 # React + TypeScript application (scaffold pending)
+|-- backend/
+|   |-- config/                # Django project configuration
+|   `-- manage.py
 |-- docs/                     # Requirements and technical documentation (planned)
-|-- .gitignore                # Ignore local secrets, environments, and generated files
--- README.md                 # Project vision, roadmap, architecture, and guidance
+|-- .gitignore
+|-- requirements.txt          # Python backend dependencies
+`-- README.md
 ```
 
 The frontend and backend structures will be expanded when those projects are initialized. No application layout is prescribed before the relevant design work.
@@ -208,9 +211,9 @@ Testing should match the risk and scope of each feature. A feature is not comple
 
 ## Development Environment
 
-The developer will manually install and configure Python, Node.js and npm, PostgreSQL, Git, and VS Code. Do not assume these are ready until their versions and configuration are checked during the project-foundation milestone. That milestone will verify the environment and initialize the application step by step.
+The developer manages Python, Node.js and npm, PostgreSQL, Git, and VS Code. Python 3.15 and Git are available in the current environment, and the project virtual environment contains Django plus the backend packages listed in `requirements.txt`. Node.js/npm were unavailable; the official Node.js installer could not complete, so install Node.js LTS and npm before creating the Vite frontend. PostgreSQL availability and configuration still need to be checked before database integration.
 
-No tools, dependencies, application projects, or database are installed or configured as part of this README initialization.
+The initial Django project and backend Python dependencies have been set up. PostgreSQL, frontend dependencies, and application features remain unconfigured.
 
 ## Deployment Direction
 
@@ -227,5 +230,5 @@ Deployment choices should be revisited when the application requirements and ope
 
 ## Recommended Next Milestone
 
-Begin **Phase 1: Project Foundation**. First verify the installed Python, Node.js/npm, PostgreSQL, and Git versions and confirm the local development setup. Then initialize the React + TypeScript + Vite frontend and Django REST backend, configure their local integration and environment-variable conventions, and record the decisions in the planned documentation. Keep this milestone limited to the foundation; do not start feature implementation until the setup is understood and verified.
+Complete **Phase 1: Project Foundation** by installing Node.js LTS/npm, creating the React + TypeScript + Vite app in `frontend/`, checking PostgreSQL availability, and then configuring backend/frontend local integration and environment-variable conventions. Record the decisions in the planned documentation before starting feature implementation.
 
